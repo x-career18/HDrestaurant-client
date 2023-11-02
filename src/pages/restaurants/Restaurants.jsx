@@ -41,7 +41,7 @@ const Restaurants = () => {
   }
 
   return (
-    <div className="bg-center bg-contain bg-[#010302]">
+    <div className="bg-center bg-contain bg-[#010302] h-screen">
       <div className="LeftContainer xl:w-1/2 xl:fixed left-0 top-0 bg-cover bg-restaurant w-full h-screen items-center z-10">
         <div className="WelcomeSect xl:ml-48 lg:top-0 flex flex-col items-center">
           <div className="mt-60 text-amber-200 text-5xl md:text-6xl font-normal font-waterBrush">
