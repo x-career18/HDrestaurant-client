@@ -41,7 +41,7 @@ const Restaurants = () => {
   }
 
   return (
-    <div className="bg-center bg-contain bg-[#010302] h-screen">
+    <div className="relative bg-center bg-contain bg-[#010302] h-screen overflow-y-auto">
       <div className="LeftContainer xl:w-1/2 xl:fixed left-0 top-0 bg-cover bg-restaurant w-full h-screen items-center z-10">
         <div className="WelcomeSect xl:ml-48 lg:top-0 flex flex-col items-center">
           <div className="mt-60 text-amber-200 text-5xl md:text-6xl font-normal font-waterBrush">
@@ -96,7 +96,7 @@ const Restaurants = () => {
             <Dropdown
               className="LocationSelect flex w-72 h-12 px-7 bg-white rounded-3xl font-beVietnam cursor-pointer"
               overlay={
-                <div style={{ background: '#FFF', borderRadius: '5px' }}>
+                <div className="bg-white rounded-md px-3 leading-10 cursor-pointer text-base font-beVietnam">
                   {restaurants
                     .reduce((uniqueRestaurants, restaurant) => {
                       // Sử dụng mảng duy nhất để lưu trữ các nhà hàng duy nhất dựa trên tên
@@ -143,7 +143,7 @@ const Restaurants = () => {
                   return true; // Hiển thị tất cả nhà hàng nếu không có locationCode được chọn
                 }
               }).map((restaurant) => (
-                <div key={restaurant?._id} className="w-full flex flex-col items-start md:flex-row md:inline-flex md:items-center gap-8">
+                <div key={restaurant?._id} className="w-full flex flex-col items-start md:flex-row md:inline-flex md:items-center gap-8 mb-5">
                   <div className="ContentImg">
                     <img
                       className="w-96 md:w-[700px] rounded-lg"
