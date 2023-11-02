@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../context/bookingContext/FormContext.jsx";
-import { fetchCreateBooking } from "../../services/bookingService.jsx";
+import { fetchCreateBooking } from "../../services/BookingService.jsx";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Image, Modal } from "antd";
