@@ -8,7 +8,7 @@ export default {
         waterBrush: ["Water Brush", "cursive"],
       },
       backgroundImage: {
-        home: "url('./images/home-bg.png')",
+        // home: "url('./images/home-bg.png')",
         restaurant: "url('./images/restaurant-bg.png')",
         menu: "url('./images/menu-bg.png')",
         "restEvent-1": "url('./images/rest-event-1.png')",
