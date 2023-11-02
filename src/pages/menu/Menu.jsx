@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchRestaurantById } from "../../services/RestaurantService.jsx";
 import { useParams } from "react-router-dom";
+import './Menu.css'
 
 
 const Menu = () => {

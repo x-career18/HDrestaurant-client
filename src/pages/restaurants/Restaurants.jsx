@@ -3,6 +3,7 @@ import { Dropdown, Space } from "antd";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { fetchAllRestaurants } from "../../services/RestaurantService.jsx";
+import './Restaurants.css'
 
 const Restaurants = () => {
   const navigate = useNavigate();
