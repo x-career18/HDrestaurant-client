@@ -1,6 +1,6 @@
 import "./home.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -76,10 +76,10 @@ const Home = () => {
               Restaurants
             </button>
           </div>
-          <button
-            onClick={() => {
-              navigate("/book");
-            }}
+          <Link to={"/book"}
+            // onClick={() => {
+            //   navigate("/book");
+            // }}
             onMouseEnter={handleBtnHover}
             onMouseLeave={handleBtnLeave}
             className="BookBtn flex px-6 py-4
@@ -94,7 +94,7 @@ const Home = () => {
             <div className="text-white text-sm font-normal font-beVietnam uppercase leading-none tracking-wide">
               Book a Table
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
