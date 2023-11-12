@@ -67,6 +67,19 @@ const Book = () => {
             eiusmod tempor incididunt ut labore.
           </div>
           <div className="Navbar mt-20 md:mt-60 h-16 p-2.5 bg-white rounded-full justify-start items-center gap-2 inline-flex">
+          <button
+              onClick={() => {
+                navigate("/");
+              }}
+              className="RestaurantBtn p-4 bg-white 
+                rounded-full justify-start items-start 
+                gap-2.5 flex 
+                hover:bg-slate-700 hover:text-gray-100 
+                transistion duration-200 
+                text-zinc-950 text-base font-normal font-beVietnam leading-none"
+            >
+              Home
+            </button>
             <button
               onClick={() => {
                 navigate("/restaurants");
@@ -81,20 +94,7 @@ const Book = () => {
                 hover:text-gray-100 
                 transistion duration-200"
             >
-              Browse restaurants
-            </button>
-            <button
-              onClick={() => {
-                navigate("/message");
-              }}
-              className="RestaurantBtn p-4 bg-white 
-                rounded-full justify-start items-start 
-                gap-2.5 flex 
-                hover:bg-slate-700 hover:text-gray-100 
-                transistion duration-200 
-                text-zinc-950 text-base font-normal font-beVietnam leading-none"
-            >
-              Next
+              Restaurants
             </button>
           </div>
         </div>
@@ -138,6 +138,7 @@ const Book = () => {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                required
               />
             </div>
           </div>
@@ -155,6 +156,7 @@ const Book = () => {
                 value={formData.numberOfPeople}
                 onChange={handleInputChange}
                 className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                required
               />
             </div>
           </div>
@@ -170,6 +172,7 @@ const Book = () => {
                   value={formData.bookingDate}
                   onChange={handleInputChange}
                   className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                  required
                 />
               </div>
             </div>
@@ -184,6 +187,7 @@ const Book = () => {
                   value={formData.bookingTime}
                   onChange={handleInputChange}
                   className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                  required
                 />
               </div>
             </div>

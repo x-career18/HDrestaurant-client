@@ -145,6 +145,7 @@ const Message = () => {
                 value={formData.phoneNumber}
                 placeholder="Enter your phone number"
                 className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                required
               />
             </div>
           </div>
@@ -160,6 +161,7 @@ const Message = () => {
                 value={formData.email}
                 placeholder="Enter your email"
                 className="w-full bg-transparent outline-none text-white text-lg font-normal font-beVietnam leading-7"
+                required
               />
             </div>
           </div>
@@ -209,13 +211,11 @@ const Message = () => {
           <Image
             src="/images/success.png"
             alt="phone"
-            width={294}
-            height={155}
           />
-          <div className="title">
+          <div className="title font-beVietnam">
             Booking bàn thành công
           </div>
-          <div className="content">
+          <div className="content font-beVietnam">
             <div>
               Cảm ơn bạn đã book bàn tại đây. Xin vui lòng đợi nhân viên bộ phận Chăm sóc khách hàng liên hệ lại để hỗ trợ. Xin cảm ơn!
             </div>
