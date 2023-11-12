@@ -99,8 +99,8 @@ const Book = () => {
           </div>
         </div>
       </div>
-      <div className="RightContainer xl:h-screen xl:mr-8 2xl:mr-40 flex flex-col xl:items-end items-center justify-center">
-        <form onSubmit={handleSubmit} className="BookForm w-[600px] md:max-xl:w-[800px] flex-col gap-12 inline-flex px-32 py-5 lg:py-0 lg:px-0">
+      <div className="RightContainer px-3 md:px-0 xl:h-screen xl:mr-8 2xl:mr-40 flex flex-col xl:items-end items-center justify-center">
+        <form onSubmit={handleSubmit} className="BookForm xl:w-[600px] md:max-xl:w-[800px] flex-col gap-12 inline-flex py-5 lg:py-0">
           <div className="flex flex-col gap-4">
             <div className="text-white text-4xl font-normal font-beVietnam leading-10">
               Book a table

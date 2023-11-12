@@ -21,7 +21,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="bg-center bg-contain bg-[#010302]">
+    <div className="bg-center bg-contain h-screen overflow-y-auto bg-[#010302]">
       <div className="LeftContainer xl:w-1/2 xl:fixed left-0 top-0 bg-cover bg-menu w-full h-screen items-center">
         <div className="WelcomeSect xl:ml-20 flex flex-col items-center">
           <div className="mt-20 text-amber-200 text-5xl md:text-6xl font-normal font-waterBrush">

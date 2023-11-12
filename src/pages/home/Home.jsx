@@ -10,7 +10,7 @@ const Home = () => {
   const handleBtnLeave = () => setIsHovered(false);
 
   return (
-    <div className="WelcomeText bg-home bg-center bg-cover h-screen flex flex-col items-center">
+    <div className="WelcomeText bg-home bg-center bg-cover h-screen overflow-y-auto flex flex-col items-center">
       <div className="flex-col items-center inline-flex mt-48 mb-6">
         <div className="text-amber-200 text-4xl sm:text-5xl md:text-6xl font-normal font-waterBrush">
           The pure taste of
