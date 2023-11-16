@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { fetchAllBookings } from "../../services/BookingService";
+import { fetchAllRestaurants } from "../../services/RestaurantService";
 import { Button, Form, Modal, Input, Table } from "antd";
 import moment from "moment/moment";
 import FindInPageIcon from "@mui/icons-material/FindInPage";
@@ -24,6 +25,30 @@ const Home = () => {
     setVisibleModal(true);
   };
 
+  // const handleOk = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const values = await form.validateFields();
+  //     console.log(values);
+  //     const bookings = await fetchAllBookings();
+  //     const matchingBooking = bookings.data.filter(
+  //       (booking) =>
+  //         booking.email === values.email &&
+  //         booking.phoneNumber === values.phoneNumber
+  //     );
+
+  //     if (matchingBooking) {
+  //       setMyBooking(matchingBooking);
+  //       setSuccess(true);
+  //     } else {
+  //       setSuccess(false);
+  //     }
+  //   } catch (error) {
+  //     console.log("Finding failed", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   const handleOk = async () => {
     setLoading(true);
     try {
@@ -35,10 +60,21 @@ const Home = () => {
           booking.email === values.email &&
           booking.phoneNumber === values.phoneNumber
       );
-
       if (matchingBooking) {
-        setMyBooking(matchingBooking);
         setSuccess(true);
+        const restaurants = await fetchAllRestaurants();
+        matchingBooking.map((booking) => {
+          const matchingRestaurant = restaurants.data.find(
+            (restaurant) => restaurant._id === booking.restaurantId
+          );
+          if (matchingRestaurant) {
+            matchingBooking.forEach(
+              (booking) => (booking.restaurantName = matchingRestaurant.name)
+            );
+            setMyBooking(matchingBooking);
+          }
+          console.log(myBooking);
+        });
       } else {
         setSuccess(false);
       }
@@ -48,6 +84,7 @@ const Home = () => {
       setLoading(false);
     }
   };
+
   const handleCancel = () => {
     setVisibleModal(false);
     setSuccess(false);
@@ -75,6 +112,11 @@ const Home = () => {
       title: "Giờ đặt ăn",
       dataIndex: "bookingTime",
       key: "bookingTime",
+    },
+    {
+      title: "Tên nhà hàng",
+      dataIndex: "restaurantName",
+      key: "restaurantName",
     },
   ];
 
