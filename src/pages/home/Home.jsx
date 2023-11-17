@@ -25,30 +25,6 @@ const Home = () => {
     setVisibleModal(true);
   };
 
-  // const handleOk = async () => {
-  //   setLoading(true);
-  //   try {
-  //     const values = await form.validateFields();
-  //     console.log(values);
-  //     const bookings = await fetchAllBookings();
-  //     const matchingBooking = bookings.data.filter(
-  //       (booking) =>
-  //         booking.email === values.email &&
-  //         booking.phoneNumber === values.phoneNumber
-  //     );
-
-  //     if (matchingBooking) {
-  //       setMyBooking(matchingBooking);
-  //       setSuccess(true);
-  //     } else {
-  //       setSuccess(false);
-  //     }
-  //   } catch (error) {
-  //     console.log("Finding failed", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const handleOk = async () => {
     setLoading(true);
     try {
@@ -96,6 +72,7 @@ const Home = () => {
       title: "Tên thực khách",
       dataIndex: "fullName",
       key: "fullName",
+      width: 100
     },
     {
       title: "Số điện thoại",
