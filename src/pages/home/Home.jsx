@@ -1,6 +1,6 @@
 import "./home.css";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { fetchAllBookings } from "../../services/BookingService";
 import { fetchAllRestaurants } from "../../services/RestaurantService";
@@ -72,7 +72,7 @@ const Home = () => {
       title: "Tên thực khách",
       dataIndex: "fullName",
       key: "fullName",
-      width: 100
+      width: 100,
     },
     {
       title: "Số điện thoại",
@@ -103,7 +103,7 @@ const Home = () => {
 
   return (
     <div className="WelcomeText bg-home bg-center bg-cover h-screen overflow-y-auto flex flex-col items-center">
-      <div className="flex-col items-center inline-flex mt-48 mb-6">
+      <div className="flex-col items-center inline-flex mt-32 md:mt-48 mb-6">
         <span className="text-amber-200 text-4xl sm:text-5xl md:text-6xl font-normal font-waterBrush">
           The pure taste of
         </span>
@@ -234,6 +234,10 @@ const Home = () => {
             </div>
           </button>
         </div>
+      </div>
+      <div className="my-1 font-beVietnam bg-black bg-opacity-30 text-sm text-amber-200 rounded-md p-1 drop-shadow-xl">
+        Are you our employee? Go to{" "}
+        <Link to="https://restaurantad.vercel.app/" className="underline underline-offset-2">Staff's Page</Link>
       </div>
     </div>
   );
