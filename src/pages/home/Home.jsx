@@ -235,7 +235,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="my-1 font-beVietnam bg-black bg-opacity-30 text-sm text-amber-200 rounded-md p-1 drop-shadow-xl">
+      <div className="my-1 font-beVietnam bg-black bg-opacity-50 text-sm text-amber-200 rounded-md p-1 drop-shadow-xl">
         Are you our employee? Go to{" "}
         <Link to="https://restaurantad.vercel.app/" className="underline underline-offset-2">Staff's Page</Link>
       </div>
